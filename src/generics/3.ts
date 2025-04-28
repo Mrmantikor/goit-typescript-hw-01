@@ -1,3 +1,3 @@
-function merge<T, K>(objA: T, objB: K): T & K {
-  return Object.assign({}, objA, objB);
+function merge<T extends object, U extends object>(objA: T, objB: U): T & U {
+  return Object.assign(objA, objB);
 }
